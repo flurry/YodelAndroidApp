@@ -35,8 +35,8 @@ import java.util.List;
  * Class that manages fetching of Tumblr blog posts.
  */
 public final class TumblrFeedManager {
-    private final static String TUMBLR_CONSUMER_KEY = "CONSUMER_KEY";
-    private final static String TUMBLR_CONSUMER_SECRET = "CONSUMER_SECRET";
+    private final static String TUMBLR_CONSUMER_KEY = "xz2gUnYX7axNd9XsVFIjUyhVElCPxU5pQVpfSV1qZgYxaiz29f";
+    private final static String TUMBLR_CONSUMER_SECRET = "DqFvBW162BYUF92jCQgrLBzVDngxKy8TAZ3tDBspSE7mz4tqTw";
     // Only a limited set of the possible Tumblr post types will be supported
     public final static String POST_TYPE_TEXT = "text";
     public final static String POST_TYPE_QUOTE = "quote";
@@ -97,7 +97,7 @@ public final class TumblrFeedManager {
                 nextBlogPost.setBlogName(BLOG_FEED_3.getTitle());
             }
 
-            /* 
+            /*
             Remove JumblrClient since we are not doing any write operations.
             This makes serialization easier.
              */
