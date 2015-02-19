@@ -1,0 +1,3 @@
+# Project-specific ProGuard settings for debug
+
+-dontobfuscate

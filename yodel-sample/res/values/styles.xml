@@ -1,0 +1,18 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_purple</item>
+        <item name="colorPrimaryDark">@color/primary_purple_dark</item>
+        <item name="colorAccent">@color/accent_color</item>
+        <item name="searchViewStyle">@style/AppBaseTheme.SearchView</item>
+    </style>
+
+    <style name="AppBaseTheme.SearchView" parent="Widget.AppCompat.SearchView">
+        <item name="queryBackground">@android:color/transparent</item>
+        <item name="android:maxWidth">800dp</item> <!-- Fill portrait actionbar -->
+    </style>
+</resources>

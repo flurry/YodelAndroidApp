@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yahoo.mobile.client.android.yodel.ui.widgets.CustomSearchViewHolder 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/primary_purple">
+    <ImageView
+        android:id="@+id/search_bar_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_search_white"/>
+
+    <EditText
+        android:id="@+id/search_bar_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:textColor="@color/white"
+        android:hint="@string/search_web_hint"
+        android:imeOptions="actionSearch"
+        android:singleLine="true"/>
+
+    <ImageView
+        android:id="@+id/search_bar_clear_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:tint="#ffbdbdbd"/>
+
+
+</com.yahoo.mobile.client.android.yodel.ui.widgets.CustomSearchViewHolder>

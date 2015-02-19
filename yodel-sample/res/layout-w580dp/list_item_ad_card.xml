@@ -1,0 +1,106 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:background="@color/gray">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:minHeight="200dp"
+        cardView:cardCornerRadius="2dp"
+        android:clipToPadding="false">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/list_selector_background">
+            <ImageView
+                android:id="@+id/ad_image"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="-10dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                tools:layout_height="200dp"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:id="@+id/ad_publisher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif"
+                    android:textSize="@dimen/text_size_large"
+                    android:textStyle="bold"
+                    android:textColor="@color/sponsored_text_color"
+                    tools:text="@string/placeholder_publisher_name"/>
+
+                <ImageView
+                    android:id="@+id/sponsored_image"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignBottom="@id/ad_publisher"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+
+                <TextView
+                    android:id="@+id/ad_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ad_publisher"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/text_size_xlarge"
+                    android:textStyle="bold"
+                    tools:text="@string/placeholder_post_title"/>
+
+                <TextView
+                    android:id="@+id/ad_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ad_title"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:textSize="@dimen/text_size_large"
+                    tools:text="@string/placeholder_post_body"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/sponsored_text"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_small"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>

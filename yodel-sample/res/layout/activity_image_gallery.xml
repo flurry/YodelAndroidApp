@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tools:FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.yahoo.mobile.client.android.yodel.ui.ImageGalleryActivity">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/image_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.yahoo.mobile.client.android.yodel.ui.widgets.CaptionViewPagerIndicator
+        android:id="@+id/caption_pager_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/touchable_view_min_height"
+        android:layout_gravity="bottom"/>
+
+    <include layout="@layout/view_transparent_toolbar"/>
+</tools:FrameLayout>

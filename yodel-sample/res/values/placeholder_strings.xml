@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="placeholder_publisher_name">Yahoo</string>
+    <string name="placeholder_post_title">Lorem ipsum dolor sit amet</string>
+    <string name="placeholder_post_body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse varius purus eu erat mollis, eget scelerisque ante vulputate. Vivamus rutrum.</string>
+    <string name="placeholder_post_date">2 days ago</string>
+    <string name="placeholder_note_count">3</string>
+    <string name="placeholder_post_tags">#lorem #ipsum #dolor #sit #amet #consectetur #adipiscing</string>
+</resources>

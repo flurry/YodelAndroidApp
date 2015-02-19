@@ -1,0 +1,129 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="@color/dark_background">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        app:cardCornerRadius="2dp"
+        android:clipToPadding="false"
+        android:foreground="?android:attr/selectableItemBackground">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:padding="10dp"
+            android:clipToPadding="false">
+
+            <TextView
+                android:id="@+id/post_publisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fontFamily="sans-serif"
+                android:textSize="@dimen/text_size_medium"
+                android:textStyle="bold"
+                android:textColor="@color/y_blue"
+                tools:text="@string/placeholder_publisher_name"/>
+
+            <ImageView
+                android:id="@+id/sponsored_image"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignBottom="@id/post_publisher"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/post_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/post_publisher"
+                android:fontFamily="sans-serif"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold"
+                tools:text="@string/placeholder_post_title"/>
+
+            <com.yahoo.mobile.client.android.yodel.ui.widgets.AspectRatioImageView
+                android:id="@+id/post_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="-10dp"
+                android:layout_below="@id/post_title"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:aspectRatioWidth="4"
+                app:aspectRatioHeight="3"/>
+
+            <TextView
+                android:id="@+id/post_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/post_image"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-light"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="1.2"
+                android:textSize="@dimen/text_size_medium"
+                tools:text="@string/placeholder_post_body"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/post_summary"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
+
+                <ImageView
+                    android:id="@+id/icon_reblog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/view_margin_medium"
+                    android:layout_marginStart="@dimen/view_margin_medium"
+                    android:src="@drawable/ic_reblog"
+                    android:background="@null"/>
+
+                <ImageView
+                    android:id="@+id/icon_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/icon_reblog"
+                    android:layout_toStartOf="@id/icon_reblog"
+                    android:src="@drawable/ic_like"
+                    android:background="@null"/>
+
+                <TextView
+                    android:id="@+id/date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_size_small"
+                    tools:text="@string/placeholder_post_date"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</FrameLayout>
