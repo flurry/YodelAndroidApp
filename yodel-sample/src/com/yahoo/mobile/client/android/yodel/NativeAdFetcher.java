@@ -17,13 +17,12 @@
 package com.yahoo.mobile.client.android.yodel;
 
 import android.content.Context;
-import android.text.TextUtils;
 import android.util.Log;
 
 import com.flurry.android.ads.FlurryAdErrorType;
 import com.flurry.android.ads.FlurryAdNative;
-import com.flurry.android.ads.FlurryAdNativeAsset;
 import com.flurry.android.ads.FlurryAdNativeListener;
+import com.flurry.android.ads.FlurryAdTargeting;
 import com.yahoo.mobile.client.android.yodel.utils.AnalyticsHelper;
 
 import java.lang.ref.WeakReference;
@@ -236,15 +235,7 @@ public class NativeAdFetcher {
      * @return <code>true</code> if the ad object can be used, false otherwise
      */
     private boolean canUseThisAd(FlurryAdNative adNative) {
-        if (adNative != null) {
-            FlurryAdNativeAsset adHqNativeAsset = adNative.getAsset("secHqImage");
-            FlurryAdNativeAsset adNativeAsset = adNative.getAsset("secImage");
-            if (adNativeAsset != null && !TextUtils.isEmpty(adNativeAsset.getValue()) &&
-                    adHqNativeAsset != null && !TextUtils.isEmpty(adHqNativeAsset.getValue())) {
-                return true;
-            }
-        }
-        return false;
+        return adNative != null && adNative.isReady() && !adNative.isExpired();
     }
 
     /**

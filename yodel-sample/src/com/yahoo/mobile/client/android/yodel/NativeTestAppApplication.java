@@ -32,8 +32,8 @@ import java.io.IOException;
 public class NativeTestAppApplication extends Application {
     private static String LOG_TAG = NativeTestAppApplication.class.getSimpleName();
 
-    private static final String FLURRY_APIKEY = "7H69XSWPT2M3FJQFHTQY";
-    public static final String FLURRY_ADSPACE = "infeed_adspace_android";
+    private static final String FLURRY_APIKEY = "JQVT87W7TGN5W7SWY2FH";
+    public static final String FLURRY_ADSPACE = "StaticVideoNativeTest";
     public static final String YAHOO_SEARCH_APIKEY = "your_api_key";
 
     private static NativeTestAppApplication sApplication;

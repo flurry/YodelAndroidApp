@@ -59,6 +59,7 @@ public class PostListAdapter extends BaseAdapter {
     public static final String AD_ASSET_SOURCE = "source";
     public static final String AD_ASSET_SEC_HQ_BRANDING_LOGO = "secHqBrandingLogo";
     public static final String AD_ASSET_SEC_HQ_IMAGE = "secHqImage";
+    public static final String AD_ASSET_VIDEO = "videoUrl";
 
     public PostListAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
@@ -86,6 +87,7 @@ public class PostListAdapter extends BaseAdapter {
                     convertView = mInflater.inflate(R.layout.list_item_ad_card, parent, false);
 
                     adHolder.adImage = (ImageView) convertView.findViewById(R.id.ad_image);
+                    adHolder.adVideo = (ViewGroup) convertView.findViewById(R.id.ad_video);
                     adHolder.adTitle = (TextView) convertView.findViewById(R.id.ad_title);
                     adHolder.adSummary = (TextView) convertView.findViewById(R.id.ad_summary);
                     adHolder.publisher = (TextView) convertView.findViewById(R.id.ad_publisher);
@@ -239,8 +241,12 @@ public class PostListAdapter extends BaseAdapter {
 
             FlurryAdNativeAsset adNativeAsset = adNative.getAsset(AD_ASSET_SEC_HQ_BRANDING_LOGO);
             mImageLoader.displayImage(adNativeAsset.getValue(), viewHolder.sponsoredImage);
-            adNativeAsset = adNative.getAsset(AD_ASSET_SEC_HQ_IMAGE);
-            mImageLoader.displayImage(adNativeAsset.getValue(), viewHolder.adImage);
+            if (adNative.isVideoAd()) {
+                mAdAdapter.loadAdAssetInView(adNative, AD_ASSET_VIDEO, viewHolder.adVideo);
+            } else {
+                adNativeAsset = adNative.getAsset(AD_ASSET_SEC_HQ_IMAGE);
+                mImageLoader.displayImage(adNativeAsset.getValue(), viewHolder.adImage);
+            }
 
         } catch (Exception e) {
             Log.i(LOG_TAG, "Exception in fetching an Ad");
@@ -262,6 +268,7 @@ public class PostListAdapter extends BaseAdapter {
     public static class AdViewHolder
     {
         ImageView adImage;
+        ViewGroup adVideo;
         TextView adTitle;
         TextView adSummary;
         TextView publisher;
