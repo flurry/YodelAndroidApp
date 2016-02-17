@@ -89,6 +89,12 @@ public class NativeAdFetcher {
         public void onImpressionLogged(FlurryAdNative adNative) { }
 
         @Override
+        public void onExpanded(FlurryAdNative flurryAdNative) { }
+
+        @Override
+        public void onCollapsed(FlurryAdNative flurryAdNative) { }
+
+        @Override
         public void onError(FlurryAdNative adNative, FlurryAdErrorType adErrorType, int errorCode) {
             if (adErrorType.equals(FlurryAdErrorType.FETCH)) {
                 Log.i(LOG_TAG, "onFetchFailed " + errorCode);

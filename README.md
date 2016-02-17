@@ -7,7 +7,6 @@ This project showcases some of the new mobile development tools released by Yaho
 
 - Showcases integration of Flurry native ads, along with best practices for integrating native 
 ads in your Android apps
-- Showcases the Yahoo Search SDK and various use cases for the SDK.
 
 ## Requirements for working with the source:
 
@@ -16,7 +15,6 @@ ads in your Android apps
 - Android SDK Build Tools r21 or later
 - Runtime of Android 4.1 (API 16) or later
 - Tumblr Developer consumer key and secret
-- Yahoo Search SDK API key.
 
 ## Gemini native ads
 To see best practices for integrating native ads into your app, look through the following classes:
@@ -28,13 +26,6 @@ This shows best practices for integrating native ads into a list/stream of data
 
 For more info on getting started with Flurry for Android, see
 [here](https://developer.yahoo.com/flurry/docs/analytics/gettingstarted/android/).
-
-## Yahoo Search SDK
-To see example integration techniques for Yahoo Search SDK, look through the following classes:
-
-- [SearchToolButton](yodel-sample/src/com/yahoo/mobile/client/android/yodel/ui/widgets/SearchToolButton.java#L65-74)
-- [PostListFragment](yodel-sample/src/com/yahoo/mobile/client/android/yodel/ui/PostListFragment.java#L213-215)
-
 
 ## Copyright
 

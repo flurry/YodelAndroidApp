@@ -67,7 +67,7 @@ public class NativeTestAppApplication extends Application {
         }
 
         // Init Flurry
-        FlurryAgent.setLogEnabled(false);
+        FlurryAgent.setLogEnabled(true);
         FlurryAgent.init(this, FLURRY_APIKEY);
     }
 

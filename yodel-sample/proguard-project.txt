@@ -29,6 +29,10 @@
 -keep class android.support.v7.widget.SearchView { *; }
 
 # Preserve GMS classes
+-dontwarn com.google.android.gms.**
+-dontwarn com.android.volley.toolbox.**
+-dontwarn com.yahoo.data.**
+
 -keep class * extends java.util.ListResourceBundle {
     protected Object[][] getContents();
 }
