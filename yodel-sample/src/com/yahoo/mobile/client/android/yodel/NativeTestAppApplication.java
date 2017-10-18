@@ -67,8 +67,14 @@ public class NativeTestAppApplication extends Application {
         }
 
         // Init Flurry
-        FlurryAgent.setLogEnabled(true);
-        FlurryAgent.init(this, FLURRY_APIKEY);
+        new FlurryAgent.Builder()
+                .withLogEnabled(true)
+                .withCaptureUncaughtExceptions(true)
+                .withContinueSessionMillis(10)
+                .withLogEnabled(true)
+                .withLogLevel(VERBOSE)
+
+                .build(this, FLURRY_APIKEY);
     }
 
     public static NativeTestAppApplication getInstance() {
