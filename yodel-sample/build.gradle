@@ -18,9 +18,9 @@ dependencies {
     compile 'com.tumblr:jumblr:0.0.11'
 
     // Required for Flurry Analytics integration
-    compile 'com.flurry.android:analytics:8.0.1'
+    compile 'com.flurry.android:analytics:8.0.1@aar'
     // Optional - If you want to use the Ads SDK
-    compile 'com.flurry.android:ads:8.0.1'
+    compile 'com.flurry.android:ads:8.0.1@aar'
 
     compile 'com.android.support:cardview-v7:25.3.1'
     compile 'com.android.support:support-v4:25.3.1'
