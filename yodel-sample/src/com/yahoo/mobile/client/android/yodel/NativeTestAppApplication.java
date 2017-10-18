@@ -72,7 +72,7 @@ public class NativeTestAppApplication extends Application {
                 .withCaptureUncaughtExceptions(true)
                 .withContinueSessionMillis(10)
                 .withLogEnabled(true)
-                .withLogLevel(VERBOSE)
+                .withLogLevel(Log.VERBOSE)
 
                 .build(this, FLURRY_APIKEY);
     }
