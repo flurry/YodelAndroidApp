@@ -5,28 +5,40 @@ repositories {
     flatDir {
         dirs 'libs'
     }
+
+    repositories {
+        jcenter()
+    }
 }
 
 dependencies {
-    compile 'com.flurry.android:ads:6.2.0'
+
     compile 'com.yahoo.mobile.client.share.search:YahooSearch-0.1.0-with-volley@aar'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3' // Used by YSearch
     compile 'com.tumblr:jumblr:0.0.11'
 
-    compile 'com.android.support:cardview-v7:23.1.1'
-    compile 'com.android.support:support-v4:23.1.1'
-    compile 'com.google.android.gms:play-services-ads:8.4.0'
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.google.code.gson:gson:2.4'
+    // Required for Flurry Analytics integration
+    compile 'com.flurry.android:analytics:8.0.1@aar'
+    // Optional - If you want to use the Ads SDK
+    compile 'com.flurry.android:ads:8.0.1@aar'
+
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.google.android.gms:play-services-ads:11.0.4'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.google.code.gson:gson:2.7'
 }
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '21.1.2'
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
+        applicationId "com.flurry.sample.gemini"
         minSdkVersion 16
         targetSdkVersion 23
+        versionCode 1
+        versionName "2.0"
     }
 
     compileOptions {

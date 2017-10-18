@@ -21,6 +21,7 @@ import android.net.http.HttpResponseCache;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
+import android.util.Log;
 
 import com.flurry.android.FlurryAgent;
 import com.yahoo.mobile.client.android.yodel.utils.AnalyticsHelper;
@@ -67,8 +68,14 @@ public class NativeTestAppApplication extends Application {
         }
 
         // Init Flurry
-        FlurryAgent.setLogEnabled(true);
-        FlurryAgent.init(this, FLURRY_APIKEY);
+        new FlurryAgent.Builder()
+                .withLogEnabled(true)
+                .withCaptureUncaughtExceptions(true)
+                .withContinueSessionMillis(10)
+                .withLogEnabled(true)
+                .withLogLevel(Log.VERBOSE)
+
+                .build(this, FLURRY_APIKEY);
     }
 
     public static NativeTestAppApplication getInstance() {
